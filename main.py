@@ -82,9 +82,8 @@ async def main():
     while True:
         query: str = input("Ask: ")
         response: str = await conversation.say(query)
-        cost: float = (conversation.total_token_usage * 0.01 / 1000)
-        print(f"Answer: {response}\n"
-              f"Token usage: {conversation.total_token_usage} (${round(cost, -int(math.floor(math.log10(abs(cost))) - 2))})")
+        # cost: float = (conversation.total_token_usage * 0.01 / 1000)
+        print(f"Answer: {response}\n")
 
 
 if __name__ == "__main__":
